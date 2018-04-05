@@ -22,11 +22,17 @@ function addToCart(item) {
  itemObj.itemName = item;
  itemObj.itemPrice = getRandomIntInclusive(1, 100);
  cart.push(itemObj);
- return `${item} has been added to your cart.`
+ return `${item} has been added to your cart.`;
 }
 
 function viewCart() {
-  // write your code here
+  if (cart.length === 0) {
+    return "Your shopping cart is empty.";
+  } else if (cart.length === 1) {
+    return `In your cart, you have ${cart[0].itemName} at ${cart[0].itemPrice}.`;
+  } else {
+    
+  }
 }
 
 function total() {
