@@ -21,6 +21,7 @@ function addToCart(item) {
  let itemObj = new Object();
  itemObj.itemName = item;
  itemObj.itemPrice = getRandomIntInclusive(1, 100);
+ cart.push(itemObj);
  return `${item} has been added to your cart.`
 }
 
